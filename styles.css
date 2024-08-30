@@ -1,0 +1,112 @@
+/* Properties are ordered in alphabetical order */
+
+
+/* General */
+:root {
+    --emphasis-color: rgb(184, 57, 184); 
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    font-size: 28px;
+    margin: 0.5rem 0;
+}
+
+h2 {
+    font-size: 22px;
+    margin: 1rem 0 0.5rem 0;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+img {
+    margin: 1rem 0;
+    max-width: 65%;
+}
+
+.icon::before {
+    display: inline-block;
+    width: 1.25rem;
+}
+
+.emphasis {
+    color: var(--emphasis-color);
+}
+
+
+
+main {
+    margin: 0 1rem;
+}
+    section {
+        padding: 1.5rem 0;
+    }
+        
+        section p:last-of-type {
+            margin-bottom: 0;
+        }
+    /* Intro */ 
+
+    .intro {
+        text-align: center;
+    }
+        .pfp {
+            border: 1px solid black;
+            border-radius: 50%;
+            clip-path: circle(50%);
+        }
+        .intro a {
+            display: block;
+            margin-bottom: 1rem;
+        }
+            .intro a::before {
+                content: url(github.svg);
+                width: 1.75rem;
+            }
+
+    /* Background */
+        
+        .background div {
+            margin-top: 2rem;
+        }
+        .background img {
+            display: none;
+        }
+            .icon.pc::before {
+                content:url(pc-display-horizontal.svg);
+            }
+            .icon.book::before {
+                content:url(book.svg);
+            }
+            .icon.clipboard::before {
+                content:url(clipboard-check.svg);
+            }
+
+    /* Projects */
+
+            .project {
+                margin-bottom: 3rem;
+            }
+                .project img {
+                    border: 1px solid black;
+                }
