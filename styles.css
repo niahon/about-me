@@ -113,6 +113,7 @@ footer {
             display: block;
             margin-bottom: 1rem;
             color: inherit;
+            font-size: 18px;
         }
             .intro a::before {
                 content: url(github.svg);
@@ -145,6 +146,14 @@ footer {
                 .project img {
                     border: 1px solid black;
                 }
+
+                
+@media (max-width: 520px) {
+    .break {
+        display: inline-block;
+        margin-top: 0.5rem;
+    }
+}
 
 @media (min-width: 715px) {
     p {
@@ -202,13 +211,5 @@ footer {
     }
     p {
         width: 75%;
-    }
-
-}
-
-@media (max-width: 520px) {
-    .break {
-        display: inline-block;
-        margin-top: 0.5rem;
     }
 }
