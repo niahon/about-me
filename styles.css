@@ -3,7 +3,9 @@
 
 /* General */
 :root {
-    --emphasis-color: rgb(184, 57, 184); 
+    --primary-color: #0C6453;
+    --secondary-color: #eb5385;
+    --tertiary-color: #EEC9DA;
 }
 
 html {
@@ -32,7 +34,20 @@ h1 {
 
 h2 {
     font-size: 22px;
-    margin: 1rem 0 0.5rem 0;
+    margin-bottom: 0.5rem;
+}
+
+h1,
+h2 {
+    font-family: Tahoma;
+}
+
+h2 {
+    color: var(--primary-color)
+}
+
+h3 {
+    color: var(--secondary-color)
 }
 
 p {
@@ -41,7 +56,7 @@ p {
 
 img {
     margin: 1rem 0;
-    max-width: 65%;
+    max-width: 75%;
 }
 
 .icon::before {
@@ -50,26 +65,45 @@ img {
 }
 
 .emphasis {
-    color: var(--emphasis-color);
+    color: var(--secondary-color);
+    background-color: white;
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.5rem;
+    font-weight: 800;
 }
 
 
 
-main {
-    margin: 0 1rem;
-}
     section {
-        padding: 1.5rem 0;
+        padding: 2.5rem 1.5rem;
     }
+    section:nth-of-type(odd) {
+        background-image: linear-gradient(90deg, #39675c, var(--primary-color), #39675c);
+        color: white;
+        } 
+        section:nth-of-type(odd) h2 {
+            color: white;
+        }
+        section:nth-of-type(odd) h3 {
+            color: var(--tertiary-color);
+        }
         
         section p:last-of-type {
             margin-bottom: 0;
         }
+
+footer {
+    padding: 1.5rem 1rem 1rem;
+}
     /* Intro */ 
 
     .intro {
         text-align: center;
     }
+        .intro h2 {
+            color: rgba(255, 255, 255, 0.8);
+            margin-top: 1.25rem;
+        }
         .pfp {
             border: 1px solid black;
             border-radius: 50%;
@@ -78,6 +112,7 @@ main {
         .intro a {
             display: block;
             margin-bottom: 1rem;
+            color: inherit;
         }
             .intro a::before {
                 content: url(github.svg);
@@ -110,3 +145,70 @@ main {
                 .project img {
                     border: 1px solid black;
                 }
+
+@media (min-width: 715px) {
+    p {
+        width: 90%;
+    }
+    .intro p {
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 769px) {
+    section {
+        padding: 2.5rem 4rem;
+    }
+    footer {
+        padding: 1rem 4rem;
+    }
+    p {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1025px) {
+    section {
+        padding: 2.5rem 6rem;
+    }
+    footer {
+        padding: 1rem 6rem;
+    }
+    .past-projects {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5rem;
+    }
+        .past-projects .project:nth-of-type(even),
+        .past-projects .project:nth-of-type(even) a {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .past-projects h2 {
+            grid-column: span 2;
+        }
+        .past-projects p {
+            width: inherit;
+        }
+}
+
+@media (min-width: 1441px) {
+    section {
+        padding: 2.5rem 10rem;
+    }
+    footer {
+        padding: 1rem 10rem;
+    }
+    p {
+        width: 75%;
+    }
+
+}
+
+@media (max-width: 520px) {
+    .break {
+        display: inline-block;
+        margin-top: 0.5rem;
+    }
+}
